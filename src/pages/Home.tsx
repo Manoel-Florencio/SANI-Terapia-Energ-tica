@@ -9,7 +9,7 @@ const Home = () => {
   const testimonials = [
     {
       name: "Viviane Meaza Bemergui",
-      age: 45,
+      age: 41,
       photo: "/cliente1.jpg",
       text: "Você é um excelente terapeuta!!!!! Escuta com o coração, vai na raiz das dores 🌱 e me ajuda a respirar no meio da correria da vida 🚀.  Válvula de escape ativada! 💆‍♀✨.  Gratidão, Sani! 🙏💛"
     },
@@ -143,7 +143,7 @@ const Home = () => {
 municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br /> 
               </p>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
-                <strong> Terapeuta Energético desde 2000.</strong> <br /> Formação em Acupuntura, Reiki 1, 2, 3A e 3B - Master Reiki, Massoterapia Oriental, Auriculoterapia, Bioenergética, Acupuntura Eletrônica, Acupuntura Facial, Shiatsu Express, Quiroacupuntura, Pulsologia Energética, Crânio Acupuntura, Barras de Access, Dry Needling,  Laserpuntura Integrativa, Laser Led do Iniciante ao Avançado - ILIB,  Sistema Método Equilíbrio Base.
+                <strong> Terapeuta Energético desde 2000.</strong> <br /> Formação em Acupuntura, Reiki 1, 2, 3A e 3B - Master Reiki, Massoterapia Oriental, Auriculoterapia, Bioenergética, Acupuntura Eletrônica, Acupuntura Facial, Shiatsu Express, Quiroacupuntura, Pulsologia Energética, Crânio Acupuntura, Dry Needling,  Laserpuntura Integrativa, Laser Led do Iniciante ao Avançado - ILIB,  Sistema Método Equilíbrio Base.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <div className="flex items-center space-x-2 text-[#4C8A82]">
