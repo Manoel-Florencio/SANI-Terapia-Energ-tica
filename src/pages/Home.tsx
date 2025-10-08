@@ -15,25 +15,25 @@ const Home = () => {
     },
     {
       name: "Erika Gontijo",
-      age: 38,
+      age: 53,
       photo: "/cliente2.jpg",
       text: "Percebo que fazendo com regularidade as sessões das técnicas aplicadas pelo Sani eu fico mais calma, com o corpo e a mente mais tranquilos. Me desacelera!"
     },
     {
       name: "João Carlos da Silva",
-      age: 32,
+      age: 60,
       photo: "/cliente3.jpg",
       text: "A experiência com as terapias integrativas como Reiki e Acupuntura foi transformadora na minha vida, pois como portador de doença autoimune encontrei equilíbrio, bem-estar e uma nova forma de olhar para minha saúde. O atendimento é acolhedor, cuidadoso e totalmente personalizado. Recomendo a todos que buscam mais qualidade de vida e harmonia interior."
     },
     {
       name: "Jardilina G. do Amaral",
-      age: 52,
+      age: 66,
       photo: "/cliente4.jpg",
       text: "Meu Terapeuta tem sido uma pessoa que tem me ajudado muito, tanto no campo da saúde física quanto a mental, as dores que tanto me incomodavam graças a Deus, diminuíram consideravelmente, e outras desapareceram. Na parte mental eu fiquei muito bem graças a Deus. Aconselho que experimente , eu me sinto muito bem com o tratamento.O Sani é um ótimo profissional."
     },
     {
       name: "Fernanda Versiani",
-      age: 28,
+      age: 44,
       photo: "/cliente5.jpg",
       text: "Conheço o Sani a mais de 10 anos. Foi através do Sani que cheguei até as Práticas Integrativas sendo atendida com a Acupuntura, Reiki e auriculoterapia. Foi um divisor de águas na minha saúde.  Foi onde consegui o equilíbrio necessário para melhora da minha saúde física e mental,  me libertando da necessidade de medicamentos."
     }

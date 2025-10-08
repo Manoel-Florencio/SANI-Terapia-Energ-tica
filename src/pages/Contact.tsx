@@ -73,7 +73,7 @@ const Contact = () => {
                     <MessageCircle size={24} className="text-[#4C8A82] mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800 font-['Poppins'] mb-1">WhatsApp</h3>
-                      <p className="text-gray-600 font-['Open_Sans']">(92) 98139-5614</p>
+                      <p className="text-gray-600 font-['Open_Sans']">(92) 99127-0700</p>
                       <button
                         onClick={handleWhatsAppClick}
                         className="text-[#4C8A82] hover:text-[#3d6f68] font-medium font-['Open_Sans'] text-sm mt-2"
@@ -194,8 +194,12 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4C8A82] focus:border-[#4C8A82] font-['Open_Sans']"
                   >
                     <option value="">Selecione um serviço</option>
-                    <option value="Acupuntura">Acupuntura (Laserpuntura, Auriculoterapia, Ventosaterapia)</option>
                     <option value="Reiki">Reiki</option>
+                    <option value="Ventosaterapia">Ventosaterapia</option>
+                    <option value="Auriculoterapia">Auriculoterapia</option>
+                    <option value="Laserterapia">Laserterapia</option>
+                    <option value="Cromoterapia">Cromoterapia</option>
+                    <option value="Reiki com Sachês Aromáticos">Reiki com Sachês Aromáticos</option>
                     <option value="Shiatsu Express">Shiatsu Express</option>
                     <option value="Combinação de terapias">Combinação de terapias</option>
                     <option value="Não sei ainda">Não sei ainda - preciso de orientação</option>
