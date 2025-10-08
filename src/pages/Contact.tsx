@@ -18,22 +18,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Formatação da mensagem com todas as informações do formulário
     let message = `*Nova solicitação de contato - Sani Terapia Energética*%0A%0A`;
     message += `👤 *Nome:* ${formData.nome}%0A`;
     message += `📱 *Telefone:* ${formData.telefone}%0A`;
-    
+
     if (formData.servico) {
       message += `🎯 *Serviço de interesse:* ${formData.servico}%0A`;
     }
-    
+
     if (formData.mensagem) {
       message += `💬 *Mensagem:* ${formData.mensagem}%0A`;
     }
-    
+
     message += `%0A📅 *Data/Hora:* ${new Date().toLocaleString('pt-BR')}`;
-    
+
     // Número de teste do usuário: (92) 98139-5614
     window.open(`https://wa.me/559291270700?text=${message}`, '_blank');
   };
@@ -51,7 +51,7 @@ const Contact = () => {
             Entre em <span className="text-[#4C8A82]">Contato</span>
           </h1>
           <p className="text-xl text-gray-600 font-['Open_Sans'] max-w-3xl mx-auto leading-relaxed">
-            Estamos aqui para ajudar você a começar sua jornada de bem-estar. 
+            Estamos aqui para ajudar você a começar sua jornada de bem-estar. <br />
             Entre em contato e agende sua sessão de terapia energética.
           </p>
         </div>
@@ -67,7 +67,7 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-gray-800 font-['Poppins'] mb-8">
                   Informações de Contato
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 p-6 bg-[#F5F5F5] rounded-2xl">
                     <MessageCircle size={24} className="text-[#4C8A82] mt-1 flex-shrink-0" />
@@ -87,11 +87,18 @@ const Contact = () => {
                     <MapPin size={24} className="text-[#4C8A82] mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-semibold text-gray-800 font-['Poppins'] mb-1">Endereço</h3>
+                      <div className="flex items-center space-x-2">
+                        <img
+                          src="/logo-CETHO.png"
+                          alt="logo CETHO Terapias Integrativas"
+                          className="h-14 w-auto rounded-full"
+                        />
+                      </div>
                       <p className="text-gray-600 font-['Open_Sans']">
+                        <strong> CETHO Terapias Integrativas  2º Andar Sala 6.</strong> <br />
                         Av. Tancredo Neves, 1142<br />
                         Pq 10 de Novembro<br />
-                        Manaus - AM<br />
-                       <strong> CETHO Terapias Integrativas  2º Andar Sala 6.</strong>
+                        Manaus - AM
                       </p>
                     </div>
                   </div>
@@ -111,7 +118,7 @@ const Contact = () => {
 
               {/* Google Maps Embed */}
               <div className="bg-[#F5F5F5] rounded-2xl shadow-lg overflow-hidden">
-                  <h2 className="text-3xl font-bold text-gray-800 font-['Poppins'] mb-4 p-8">Nossa Localização</h2>
+                <h2 className="text-3xl font-bold text-gray-800 font-['Poppins'] mb-4 p-8">Nossa Localização</h2>
                 <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.097953566647!2d-60.004402199999994!3d-3.0684913999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c101387108077%3A0xdb7d087e171cd447!2sSani%20Terapia%20Energ%C3%A9tica!5e0!3m2!1spt-BR!2sbr!4v1758826722351!5m2!1spt-BR!2sbr"
@@ -125,7 +132,7 @@ const Contact = () => {
                   ></iframe>
                 </div>
                 <p className="text-sm text-gray-600 font-['Open_Sans'] mt-4 p-8">
-                
+
                 </p>
               </div>
             </div>
@@ -135,7 +142,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-gray-800 font-['Poppins'] mb-8">
                 Envie uma Mensagem
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="nome" className="block text-sm font-medium text-gray-700 font-['Open_Sans'] mb-2">

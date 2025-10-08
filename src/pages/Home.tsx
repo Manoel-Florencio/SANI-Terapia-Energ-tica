@@ -54,7 +54,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Muda automaticamente a cada 5 segundos
+    }, 25000); // Muda automaticamente a cada 25 segundos
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
@@ -103,7 +103,7 @@ const Home = () => {
             <span className="text-[#A8D5CD]">de dentro para fora</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 font-['Open_Sans'] leading-relaxed drop-shadow-md">
-            Terapias integrativas que respeitam sua individualidade e promovem equilíbrio integral
+            Terapias integrativas que respeitam sua individualidade <br /> e promovem equilíbrio integral
           </p>
           <button
             onClick={handleWhatsAppClick}
@@ -140,10 +140,10 @@ const Home = () => {
               </h2>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
                 <strong>Educador Físico</strong>, formado pela Universidade do Amazonas 1986, atuação em escolas estaduais,  
-municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br /> <strong> Terapeuta Energético desde 2000.</strong>
+municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br /> 
               </p>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
-                Formação em Acupuntura, Reiki 1, 2, 3A e 3B - Master Reiki, Massoterapia Oriental, Auriculoterapia, Bioenergética, Acupuntura Eletrônica, Acupuntura Facial, Shiatsu Express, Quiroacupuntura, Pulsologia Energética, Crânio Acupuntura, Barras de Access, Dry Needling,  Laserpuntura Integrativa, Laser Led do Iniciante ao Avançado - ILIB,  Sistema Método Equilíbrio Base.
+                <strong> Terapeuta Energético desde 2000.</strong> <br /> Formação em Acupuntura, Reiki 1, 2, 3A e 3B - Master Reiki, Massoterapia Oriental, Auriculoterapia, Bioenergética, Acupuntura Eletrônica, Acupuntura Facial, Shiatsu Express, Quiroacupuntura, Pulsologia Energética, Crânio Acupuntura, Barras de Access, Dry Needling,  Laserpuntura Integrativa, Laser Led do Iniciante ao Avançado - ILIB,  Sistema Método Equilíbrio Base.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <div className="flex items-center space-x-2 text-[#4C8A82]">
@@ -186,22 +186,22 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
               {
                 icon: <User size={40} />,
                 title: "Atendimento personalizado",
-                description: "Cada tratamento é único, respeitando suas necessidades individuais"
+                description: "Conhecendo sua história para respeitar suas necessidades reais."
               },
               {
                 icon: <Shield size={40} />,
-                title: "Técnicas seguras e não invasivas",
-                description: "Métodos comprovados que promovem cura natural sem riscos"
+                title: "Terapias Energéticas",
+                description: "Promovem autocura de forma consciente e natural."
               },
               {
                 icon: <Sparkles size={40} />,
-                title: "Olhar integral para corpo, mente e energia",
-                description: "Tratamento holístico que considera todos os aspectos do seu bem-estar"
+                title: "Olhar integral para Corpo, Mente e Espírito",
+                description: "Visão holística considerando todos os aspectos para gerar Bem-Estar."
               },
               {
                 icon: <Heart size={40} />,
-                title: "Terapias combinadas para maior bem-estar",
-                description: "Combinação de técnicas para resultados mais eficazes e duradouros"
+                title: "Terapias integradas para harmonização",
+                description: "Desacelerar, relaxar, amenizar dores, Físicas e Emocionais."
               }
             ].map((item, index) => (
               <div 
@@ -259,7 +259,7 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
                   <img
                     src={testimonials[currentTestimonial].photo}
                     alt={testimonials[currentTestimonial].name}
-                    className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg"
+                    className="w-20 h-26 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg"
                   />
                   <h3 className="text-xl font-semibold text-[#4C8A82] font-['Poppins'] mb-1">
                     {testimonials[currentTestimonial].name}

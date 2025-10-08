@@ -12,7 +12,7 @@ const Services = () => {
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => 
+        setCurrentImageIndex((prevIndex) =>
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
       }, 5000); // Troca a cada 5 segundos
@@ -33,11 +33,10 @@ const Services = () => {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentImageIndex 
-                  ? 'bg-white' 
+              className={`w-3 h-3 rounded-full transition-all ${index === currentImageIndex
+                  ? 'bg-white'
                   : 'bg-white/50 hover:bg-white/75'
-              }`}
+                }`}
             />
           ))}
         </div>
@@ -50,14 +49,14 @@ const Services = () => {
       title: "Reiki",
       subtitle: "Terapia Energética",
       description: "Terapia energética que promove equilíbrio físico, mental e espiritual, auxiliando na redução do estresse e trazendo mais vitalidade e serenidade.",
-      duration: "~1 hora",
+      duration: "1 hora",
       value: "Conforme plano de atendimento",
       icon: <Heart size={40} />,
       images: ["/reiki_img1.jpg", "/reiki_img2.jpg", "/reiki_img3.jpg"],
       benefits: [
-        "Equilíbrio energético",
-        "Redução da ansiedade",
-        "Maior vitalidade",
+        "Harmonização Energética",
+        "Bem-estar integral",
+        "Reduz ansiedade",
         "Sensação de paz interior"
       ]
     },
@@ -65,7 +64,7 @@ const Services = () => {
       title: "Ventosaterapia",
       subtitle: "Terapia com Ventosas",
       description: "Técnica milenar que utiliza copos de sucção para melhorar a circulação sanguínea, aliviar dores musculares e promover o relaxamento profundo.",
-      duration: "~45 minutos",
+      duration: "45 minutos",
       value: "Conforme avaliação",
       icon: <Sparkles size={40} />,
       images: ["/ventosaterapia_img1.jpg", "/ventosaterapia_img2.jpg", "/ventosaterapia_img3.jpg"],
@@ -80,7 +79,7 @@ const Services = () => {
       title: "Auriculoterapia",
       subtitle: "Acupuntura na Orelha",
       description: "Técnica que utiliza pontos específicos da orelha para tratar diversos desequilíbrios físicos e emocionais, promovendo bem-estar integral.",
-      duration: "~30 minutos",
+      duration: "30 minutos",
       value: "Após avaliação inicial",
       icon: <Star size={40} />,
       images: ["/auriculoterapia_img1.jpg", "/auriculoterapia_img2.jpg", "/auriculoterapia_img3.jpg"],
@@ -95,7 +94,7 @@ const Services = () => {
       title: "Shiatsu Express",
       subtitle: "Técnica Rápida e Eficaz",
       description: "Técnica rápida e eficaz de pressão em pontos específicos do corpo, indicada para alívio imediato de tensões e relaxamento.",
-      duration: "~30 minutos",
+      duration: "30 minutos",
       value: "Conforme avaliação",
       icon: <Zap size={40} />,
       images: ["/shiatsu_img1.jpg", "/shiatsu_img2.jpg", "/shiatsu_img3.jpg"],
@@ -103,29 +102,29 @@ const Services = () => {
         "Alívio imediato de tensões",
         "Relaxamento muscular",
         "Melhora da circulação",
-        "Sensação de bem-estar"
+        "Desaceleração Mental"
       ]
     },
     {
       title: "Laserterapia",
       subtitle: "Tecnologia Avançada",
-      description: "Tratamento com laser de baixa intensidade que acelera a cicatrização, reduz inflamações e promove a regeneração celular de forma não invasiva.",
-      duration: "~20-30 minutos",
+      description: "A Acupuntura visa o restabelecimento energético corporal utilizando o Laser de baixa potência para os atendimentos com eficácia e conforto ao paciente.",
+      duration: "20-30 minutos",
       value: "Conforme protocolo",
       icon: <Eye size={40} />,
       images: ["/laserterapia_img1.jpg", "/laserterapia_img2.jpg", "/laserterapia_img3.jpg"],
       benefits: [
-        "Acelera cicatrização",
-        "Reduz inflamações",
-        "Regeneração celular",
-        "Tratamento não invasivo"
+        "Tratamento não invasivo",
+        "Alívio de dores",
+        "Melhora da imunidade",
+        "Reequilíbrio energético"
       ]
     },
     {
       title: "Cromoterapia",
       subtitle: "Terapia das Cores",
       description: "Terapia que utiliza as propriedades das cores para equilibrar os chakras, harmonizar as energias e promover bem-estar físico e emocional.",
-      duration: "~45 minutos",
+      duration: "45 minutos",
       value: "Conforme plano",
       icon: <Palette size={40} />,
       images: ["/cromoterapia_img1.jpg", "/cromoterapia_img2.jpg"],
@@ -140,7 +139,7 @@ const Services = () => {
       title: "Reiki com Sachês Aromáticos",
       subtitle: "Reiki + Aromaterapia",
       description: "Combinação única de Reiki com sachês aromáticos naturais, potencializando os benefícios energéticos através dos aromas terapêuticos.",
-      duration: "~1h 15min",
+      duration: "1 hora",
       value: "Conforme plano especial",
       icon: <Flower size={40} />,
       images: ["/reiki_saches_img1.jpg", "/reiki_saches_img2.jpg", "/reiki_saches_img3.jpg"],
@@ -161,8 +160,12 @@ const Services = () => {
           <h1 className="text-5xl font-bold text-gray-800 font-['Poppins'] mb-6">
             Nossos <span className="text-[#4C8A82]">Serviços</span>
           </h1>
+          <h4 className="text-6xl md:text-3xl font-bold text-white mb-6 font-['Poppins'] leading-tight drop-shadow-lg [text-stroke:1px_gray] [-webkit-text-stroke:1px_gray]">
+            Saúde e bem-estar<br />
+            <span className="text-[#A8D5CD]">de dentro para fora</span>
+          </h4>
           <p className="text-xl text-gray-600 font-['Open_Sans'] max-w-3xl mx-auto leading-relaxed">
-            Terapias integrativas personalizadas para promover seu equilíbrio e bem-estar completo
+            Terapias integrativas personalizadas para promover <br /> seu equilíbrio e bem-estar completo.
           </p>
         </div>
       </section>
@@ -172,11 +175,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                  }`}
               >
                 {/* Content */}
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
@@ -261,8 +263,8 @@ const Services = () => {
                 Nosso Compromisso
               </h2>
               <p className="text-xl text-gray-600 font-['Open_Sans'] leading-relaxed">
-                Nosso compromisso é oferecer terapias integrativas que respeitam sua individualidade 
-                e promovem equilíbrio integral em corpo, mente e energia.
+                Nosso compromisso é oferecer terapias integrativas que respeitam sua individualidade
+                e promovem equilíbrio integral no corpo, mente e espírito.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -275,7 +277,7 @@ const Services = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Star size={20} className="text-[#4C8A82]" />
-                  <span className="text-gray-700 font-['Open_Sans']">Resultados duradouros e eficazes</span>
+                  <span className="text-gray-700 font-['Open_Sans']">Resultados naturais e eficazes</span>
                 </div>
               </div>
               <button

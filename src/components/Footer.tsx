@@ -42,7 +42,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm opacity-90 font-['Open_Sans'] leading-relaxed">
-              Saúde e bem-estar de dentro para fora. Cuidado integral respeitando sua individualidade.
+              Saúde e bem-estar de dentro para fora. <br /> Cuidado integral respeitando sua individualidade.
             </p>
           </div>
 
@@ -73,9 +73,17 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                 <span className="text-sm font-['Open_Sans']">
+                 <strong>CETHO Terapias Integrativas</strong> <br />
                   Av. Tancredo Neves, 1142<br />
                   Pq 10 de Novembro - Manaus - AM
                 </span>
+                <div className="flex items-center space-x-2">
+                        <img
+                          src="/logo-CETHO.png"
+                          alt="logo CETHO Terapias Integrativas"
+                          className="h-14 w-auto rounded-full"
+                        />
+                      </div>
               </div>
             </div>
 
