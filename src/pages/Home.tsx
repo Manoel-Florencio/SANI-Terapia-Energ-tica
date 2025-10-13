@@ -65,7 +65,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Carrossel de Imagens */}
-            <section className="relative h-[50vh] md:h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
         {/* Container do vídeo de fundo */}
         <div className="absolute inset-0 overflow-hidden">
           <video
