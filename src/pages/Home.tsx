@@ -67,7 +67,7 @@ const Home = () => {
       {/* Hero Section - Carrossel de Imagens */}
             <section className="relative h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
         {/* Container do vídeo de fundo */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden bg-[#bde5d6]">
           <video
             autoPlay
             loop
