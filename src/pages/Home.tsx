@@ -42,14 +42,7 @@ const Home = () => {
   // Estados para carrossel de depoimentos
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  // Estados para carrossel do banner
-  const [currentBannerImage, setCurrentBannerImage] = useState(0);
-  
-  const bannerImages = [
-    '/consultorio1.jpg',
-    '/consultorio2.jpg', 
-    '/consultorio3.jpg'
-  ];
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,13 +52,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  useEffect(() => {
-    const bannerInterval = setInterval(() => {
-      setCurrentBannerImage((prev) => (prev + 1) % bannerImages.length);
-    }, 10000); // Muda automaticamente a cada 10 segundos
 
-    return () => clearInterval(bannerInterval);
-  }, [bannerImages.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -78,23 +65,30 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Carrossel de Imagens */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Container das imagens de fundo */}
-        <div className="absolute inset-0">
-          {bannerImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-                index === currentBannerImage ? 'opacity-60' : 'opacity-0'
-              }`}
-              style={{
-                backgroundImage: `url(${image})`
-              }}
-            />
-          ))}
+            <section className="relative h-[50vh] md:h-screen flex items-center justify-center overflow-hidden">
+        {/* Container do vídeo de fundo */}
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/sani1.jpg"
+            className="absolute w-full h-full object-contain"
+
+            style={{ zIndex: 0 }}
+
+            onError={(e) => console.error('background video error', e)}
+            onCanPlay={() => console.log('background video can play')}
+          >
+            <source src="/background_video.mp4" type="video/mp4" />
+            Seu navegador não suporta a tag de vídeo.
+          </video>
           {/* Overlay escuro para melhor legibilidade do texto */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40" style={{ zIndex: 1 }}></div>
         </div>
+
 
         {/* Conteúdo do banner */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
@@ -114,20 +108,6 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Indicadores do carrossel */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
-          {bannerImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentBannerImage(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentBannerImage 
-                  ? 'bg-white scale-110' 
-                  : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-              }`}
-            />
-          ))}
-        </div>
       </section>
 
       {/* Sobre Mim */}
@@ -139,8 +119,8 @@ const Home = () => {
                 Sobre o Terapeuta
               </h2>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
-                <strong>Educador Físico</strong>, formado pela Universidade do Amazonas 1986, atuação em escolas estaduais,  
-municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br /> 
+                <strong>Educador Físico</strong>, formado pela Universidade do Amazonas 1986, atuação em escolas estaduais,
+                municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br />
               </p>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
                 <strong> Terapeuta Energético desde 2000.</strong> <br /> Formação em Acupuntura, Reiki 1, 2, 3A e 3B - Master Reiki, Massoterapia Oriental, Auriculoterapia, Bioenergética, Acupuntura Eletrônica, Acupuntura Facial, Shiatsu Express, Quiroacupuntura, Pulsologia Energética, Crânio Acupuntura, Dry Needling,  Laserpuntura Integrativa, Laser Led do Iniciante ao Avançado - ILIB,  Sistema Método Equilíbrio Base.
@@ -201,10 +181,10 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
               {
                 icon: <Heart size={40} />,
                 title: "Terapias integradas para harmonização",
-                description: "Desacelerar, relaxar, amenizar dores, Físicas e Emocionais."
+                description: "Desacelerar, relaxar, amenizar dores Físicas e Emocionais."
               }
             ].map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center"
               >
@@ -245,7 +225,7 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
               >
                 <ChevronLeft size={24} />
               </button>
-              
+
               <button
                 onClick={nextTestimonial}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-[#4C8A82] p-3 rounded-full shadow-lg transition-all z-10"
@@ -268,7 +248,7 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
                     {testimonials[currentTestimonial].age} anos
                   </p>
                 </div>
-                
+
                 <p className="text-gray-700 font-['Open_Sans'] leading-relaxed text-lg italic mb-6">
                   "{testimonials[currentTestimonial].text}"
                 </p>
@@ -280,11 +260,10 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      index === currentTestimonial 
-                        ? 'bg-[#4C8A82] scale-110' 
-                        : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all ${index === currentTestimonial
+                      ? 'bg-[#4C8A82] scale-110'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
                   />
                 ))}
               </div>
@@ -300,7 +279,7 @@ municipais, particulares e universidade. <br />  Pós graduação em Metodologia
             Quer cuidar do seu corpo e da sua energia?
           </h2>
           <p className="text-xl text-white opacity-90 font-['Open_Sans'] mb-8 leading-relaxed">
-            Entre em contato agora pelo WhatsApp e agende sua sessão! 
+            Entre em contato agora pelo WhatsApp e agende sua sessão!
             Transforme sua vida com terapias que realmente funcionam.
           </p>
           <button
