@@ -119,7 +119,7 @@ const Home = () => {
                 Sobre o Terapeuta
               </h2>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
-                <strong>Educador Físico</strong>, formado pela Universidade do Amazonas 1986, atuação em escolas estaduais,
+                <strong>Educador Físico</strong>, formado pela Universidade do Amazonas 1989, atuação em escolas estaduais,
                 municipais, particulares e universidade. <br />  Pós graduação em Metodologia do Ensino pelo C.E. La Salle de Ensino Superior. <br />
               </p>
               <p className="text-lg text-gray-600 font-['Open_Sans'] leading-relaxed">
@@ -154,7 +154,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 font-['Poppins'] mb-4">
-              Por que escolher a Sani Terapia?
+              Por que escolher Sani Terapia?
             </h2>
             <p className="text-xl text-gray-600 font-['Open_Sans']">
               Cuidado integral com técnicas seguras e personalizadas
