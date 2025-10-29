@@ -52,6 +52,15 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+   useEffect(() => {
+    const setRealVh = () => {
+      document.documentElement.style.setProperty('--real-vh', `${window.innerHeight * 0.01}px`);
+    };
+    setRealVh();
+    window.addEventListener('resize', setRealVh);
+    return () => window.removeEventListener('resize', setRealVh);
+  }, []);
+
 
 
   const nextTestimonial = () => {
@@ -65,7 +74,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Carrossel de Imagens */}
-            <section className="relative h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative h-[calc(var(--real-vh)*60)] md:h-[calc(var(--real-vh)*100)] flex items-center justify-center overflow-hidden">
         {/* Container do vídeo de fundo */}
         <div className="absolute inset-0 overflow-hidden bg-[#bde5d6]">
           <video
